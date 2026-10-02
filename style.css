@@ -1,0 +1,592 @@
+/* =========================================================
+   KAPONDA EDUCATION ACADEMY
+   Attendance Management System
+   Common Stylesheet
+   ========================================================= */
+
+
+/* =========================
+   COLOR THEME
+   ========================= */
+
+:root {
+    --primary: #9f1d20;
+    --primary-dark: #741518;
+    --primary-light: #c63a3d;
+
+    --secondary: #b8860b;
+
+    --dark: #5b1114;
+    --dark-light: #7a1d20;
+
+    --background: #f6f4f2;
+    --white: #ffffff;
+
+    --text: #222222;
+    --muted: #666666;
+
+    --border: #dddddd;
+}
+
+
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================
+   LOGIN LOGO
+   ========================= */
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-logo img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 16px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.header p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-label {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+   ========================= */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 75px);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    width: 240px;
+    background: var(--dark);
+    color: white;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SIDEBAR LOGO
+   ========================= */
+
+.sidebar-logo {
+    text-align: center;
+    padding: 5px 10px 20px;
+}
+
+.sidebar-logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.sidebar-logo h3 {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.sidebar-logo p {
+    font-size: 10px;
+    margin: 0;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   SIDEBAR LINKS
+   ========================= */
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    font-size: 14px;
+
+    transition: background 0.2s;
+}
+
+.sidebar a:hover {
+    background: var(--primary);
+}
+
+.sidebar .section-title {
+    padding: 15px 20px 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.content {
+    flex: 1;
+    padding: 25px;
+    min-width: 0;
+}
+
+.page-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+
+    border-top: 4px solid var(--primary);
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    color: #555;
+}
+
+.card .number {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+
+/* =========================
+   PANELS
+   ========================= */
+
+.panel {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.panel h2,
+.panel h3 {
+    margin-top: 0;
+    color: var(--dark);
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: var(--dark);
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+}
+
+td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #faf5f5;
+}
+
+
+/* =========================
+   FORMS
+   ========================= */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 14px;
+    background: white;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+
+    padding: 9px 15px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-success {
+    background: #198754;
+    color: white;
+}
+
+.btn-warning {
+    background: #b8860b;
+    color: white;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn + .btn {
+    margin-left: 5px;
+}
+
+
+/* =========================
+   ALERTS
+   ========================= */
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+.alert-info {
+    background: #f5dfe0;
+    color: #6b171a;
+}
+
+
+/* =========================
+   STATUS BADGES
+   ========================= */
+
+.badge {
+    display: inline-block;
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-active {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.badge-inactive {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.badge-present {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.badge-absent {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.badge-permission {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   LOGIN
+   ========================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--background);
+}
+
+.login-box {
+    width: 400px;
+    max-width: 95%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    border-top: 5px solid var(--primary);
+}
+
+.login-box h1 {
+    text-align: center;
+
+    color: var(--primary);
+
+    margin-top: 5px;
+}
+
+.login-box .btn {
+    width: 100%;
+}
+
+
+/* =========================
+   ATTENDANCE
+   ========================= */
+
+.attendance-actions {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+}
+
+.attendance-actions input,
+.attendance-actions select {
+    width: auto;
+}
+
+.attendance-status {
+    font-weight: bold;
+}
+
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 210px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header-user {
+        margin-top: 10px;
+    }
+}
